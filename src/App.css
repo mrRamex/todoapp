@@ -1,0 +1,137 @@
+.App{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 8rem;
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.App .header{
+  position: absolute;
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: sans-serif;
+}
+
+.App .form{
+  width: 50%;
+  height: 80vh;
+  background-color: rgb(20, 20, 20);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, .3);
+  border: 1px solid rgba(90, 90, 90, .21);
+  position: relative;
+}
+
+.App .form .add-item{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.App .form .add-item input{
+  width: 50%;
+  height: 4vh;
+  margin-right: 4rem;
+  background-color: transparent;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  transition: 0.2s ease-in-out;
+  border-bottom: #23d5ab solid 2px;
+  padding-left: 1rem;
+  color: white;
+}
+
+.App .form .add-item input:focus{
+  border-bottom: #23a6d5 2px solid;
+  transform: rotateZ(-2deg);
+}
+
+.App .form .add-item input::placeholder{
+  color: white;
+}
+
+.App .form .add-item button{
+  background-color: #23d5ab;
+  outline: none;
+  border: none;
+  color: black;
+  width: 30%;
+  height: 4vh;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  font-size: 1.1rem;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 0 50px rgba(0, 0, 0, .1);
+}
+
+.App .form .add-item button:hover{
+  background-color: #23a6d5;
+  transform: rotateZ(-2deg);
+}
+
+.App .form .wrapp{
+  flex: 1;
+  overflow-y: auto;
+  max-height: 60vh; /* Add a maximum height for scrollable content */
+}
+
+.App .form .wrapp ul .item{
+  background-color: #23d5ab;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  margin: 1rem;
+  width: max-content;
+}
+
+.App .form .wrapp ul .delete-btn{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.App .form .wrapp ul .delete-btn:hover{
+  transform: rotateZ(45deg);
+}
